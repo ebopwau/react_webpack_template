@@ -1,10 +1,13 @@
 import React from 'react'
-import './App.scss'
+import  styles from './App.module.scss'
+import {Title} from './components/Title.jsx'
 
 export function App () {
     return (
-        <div>
-            <h1>Welcome {new Date().toDateString()}</h1>
+        <div className={styles['example']}>
+            <Title
+                title={`Welcome New ${new Date().toDateString()}`}
+            />
         </div>
     )
 }
