@@ -8,6 +8,9 @@ module.exports = {
         path: path.join(__dirname, '../dist'),
         filename: 'index.bundle.js'
     },
+    resolve: {
+        extensions: ['.js', '.jsx', '.css', '.scss', '.json']
+    },
     devServer: {
         port: 3010,
     },
