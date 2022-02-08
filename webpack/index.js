@@ -6,13 +6,15 @@ const CompressionPlugin = require('compression-webpack-plugin');
 module.exports = {
     output: {
         path: path.join(__dirname, '../dist'),
-        filename: 'index.bundle.js'
+        filename: 'index.bundle.js',
+        publicPath: '/'
     },
     resolve: {
         extensions: ['.js', '.jsx', '.css', '.scss', '.json']
     },
     devServer: {
         port: 3010,
+        historyApiFallback: true,
     },
     module: {
         rules: [
